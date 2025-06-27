@@ -1,95 +1,93 @@
-Equinex – Your Stock Trading Platform
-Equinex is a full-stack stock trading simulation platform featuring real-time stock data, a chatbot assistant, portfolio holdings, order history, and private messaging. It’s designed for learning, testing, and exploring stock trading concepts in a clean and modern interface.
+# 📈 Equinex – Your Stock Trading Platform
 
-Tech Stack
-Frontend:
+**Equinex** is a full-stack stock trading simulation platform that enables users to explore stock trading concepts in a real-time, interactive environment. Designed for learning and experimentation, Equinex provides live market data, AI chatbot support, portfolio tracking, and private messaging.
 
-React.js
+---
 
-Axios
+## 🔧 Tech Stack
 
-React Router
+### Frontend
+- **React.js**
+- **Axios**
+- **React Router**
+- **Chart.js**
 
-Chart.js
+### Backend
+- **Node.js (Express)**
+- **WebSocket** (native `ws` + `Socket.IO`)
+- **MongoDB** with **Mongoose**
+- **Passport.js** (authentication)
+- **JWT** (API security)
 
-Backend:
+### APIs Used
+- [MarketStack](https://marketstack.com/)
+- [Finnhub](https://finnhub.io/)
+- [AlphaVantage](https://www.alphavantage.co/)
 
-Node.js (Express)
+### Deployment
+- **Frontend:** [Vercel](https://vercel.com/)
+- **Backend:** [Render](https://render.com/)
 
-WebSocket (native WS + Socket.IO)
+---
 
-MongoDB + Mongoose
+## 🚀 Features
 
-Passport.js for auth
+- ✅ User Authentication (Passport + JWT)
+- 📈 Real-Time Stock Prices (via WebSocket + Finnhub)
+- 🤖 AI Chatbot with Stock Info (AlphaVantage)
+- 💼 Portfolio Holdings & Dynamic Order History
+- 🛒 Virtual Buy/Sell Simulation
+- 📩 Private Messaging (Socket.IO)
+- 📡 REST APIs for Users, Orders, and Posts
 
-JWT for APIs
+---
 
-External APIs: MarketStack, Finnhub, AlphaVantage
+## ⚙️ Quick Setup
 
-Deployment:
+### 1. Clone Repository & Install Dependencies
 
-Frontend: Vercel
-
-Backend: Render
-
-Quick Setup
-1. Clone Repo & Install Dependencies
+```bash
 git clone https://github.com/your-username/equinex-trading-platform.git
 cd equinex-trading-platform
 
-# Backend Setup
+# Backend setup
 cd backend
 npm install
 
-# Frontend Setup
+# Frontend setup
 cd ../frontend
 npm install
 
-2. Backend Setup
-Create a .env file inside the /backend directory and add the following:
 
+```
+#.env
+```bash
 PORT=10000
 MONGO_URL=mongodb://localhost:27017/equinex
 SECRET=your-secret-key
 MARKETSTACK_API_KEY=your_marketstack_api_key
 FINNHUB_API_KEY=your_finnhub_api_key
 ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key
+```
+#Start the backend:
 
-Start the backend server:
-
+```bash
 node combined-server.js
+```
+### Frontend Configuration
+Create a .env file in /frontend directory:
 
-3. Frontend Setup
-cd ../frontend
-npm install
 
-Create a .env file inside the /frontend directory and add the following:
+###Start the frontend:
 
-REACT_APP_BACKEND_URL=http://localhost:10000
-REACT_APP_WEBSOCKET_PORT=10000
-
-Start the frontend:
-
+```bash
 npm start
+Frontend runs at: http://localhost:3000
+Backend runs at: http://localhost:10000
+```
+###📁 Folder Structure
+```bash
 
-Now your app runs at http://localhost:3000 and the backend at http://localhost:10000.
-
-Features
-User Authentication (Passport + JWT)
-
-Real-Time Stock Prices via WebSocket (Finnhub)
-
-AI Chatbot with Stock Info (AlphaVantage)
-
-Dynamic Holdings & Order History
-
-Virtual Buy/Sell Simulation
-
-Private Messaging (Socket.IO)
-
-REST APIs for user, posts, and orders
-
-Folder Structure
 equinex-trading-platform/
 ├── backend/
 │   ├── combined-server.js
@@ -102,6 +100,4 @@ equinex-trading-platform/
 │   ├── public/
 │   └── .env
 └── README.md
-
-License
-MIT License © 2025
+```
